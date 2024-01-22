@@ -16,3 +16,9 @@ After this you can set your Logic Analyzer Software to the Line Names: DCD, RX, 
 
 <img src=rs232LA1.png width=500px>
 
+What do we see? The Plotter sends his Buffer full on Line DSR and not like excepted on Line CTS. So i Swap the connections inside my Cable and try again.
+
+<img src=rs232LA2.png width=500px>
+
+Debug can be easy - it looks complex but it isn't. So lets give it a try.
+
