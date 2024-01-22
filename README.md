@@ -16,7 +16,10 @@ After this you can set your Logic Analyzer Software to the Line Names: DCD, RX, 
 
 <img src=rs232LA1.png width=500px>
 
-What do we see? The Plotter sends his Buffer full on Line DSR and not like excepted on Line CTS. So i Swap the connections inside my Cable and try again. Here i use RI behind the Reciver to check if CTS really reaches the PIs Pinheader. So after CTS Changes TX stops - fine, thats it!
+What do we see? The Plotter sends his Buffer full on Line DSR and not like excepted on Line CTS.
+
+So i Swap the connections inside my Cable and try again. Now i see after CTS Changes TX stops - fine, thats it!
+Here i use Channel 7 / Pin 8 on LA behind the Reciver to check if CTS really reaches the PIs Pinheader. Yes i don't look on RI on my Sniffer Board but this is ok: The plotter Cable doen't connect it :)
 
 <img src=rs232LA2.png width=500px>
 
