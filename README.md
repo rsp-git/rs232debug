@@ -12,13 +12,17 @@ The Hardware Sniffer Board is not only a connector but also a Voltage Translator
 <img src="rs232sniffer.png" width=300px>
 
 Then you need to connect the Pinheader to the LA. Be careful: Pin 1 to 1 and so on - till Pin 5 on the Sniffer: This is GND (Pin9 on LA). Then continue with Pin 5 to Pin 4 and so on.
-After this you can set your Logic Analyzer Software to the Line Names: DCD, RX, TX, DTR, DSR, RTS, CTS and RI
+After this you can set your Logic Analyzer Software to the Line Names: DCD, RX, TX, DTR, DSR, RTS, CTS and RI. I also set some Glitch filter inside the LA Software (50µs per channels), add a 9,6kBaud Packet Analyzer on TX and Trigger to TX. I also Capture 100s with 5GB Memory.
 
 <img src=rs232LA1.png width=500px>
 
-What do we see? The Plotter sends his Buffer full on Line DSR and not like excepted on Line CTS. So i Swap the connections inside my Cable and try again.
+What do we see? The Plotter sends his Buffer full on Line DSR and not like excepted on Line CTS. So i Swap the connections inside my Cable and try again. Here i use RI behind the Reciver to check if CTS really reaches the PIs Pinheader. So after CTS Changes TX stops - fine, thats it!
 
 <img src=rs232LA2.png width=500px>
 
 Debug can be easy - it looks complex but it isn't. So lets give it a try.
+
+# Some hints for RS232 on Raspi Pi
+
+I use for my tests a Waveshare RS232 Board with CTS and RTS. Then you need a Dsub9 Male to Male Connector with crossed RX and TX or you change the Connector on the Device cable - but then you are not more compliant to PC Stuff and maybe also to your Sniffer. I put in a selfbuild adaptor - so its easy to change while debug it. After all i end up with a small SP3232 Board from Asia hooked between a pinheader to my Raspi and a DSub9 Male inside the Raspi Case. If everything works tells you the LA :)
 
