@@ -13,5 +13,5 @@ The Hardware Sniffer Board is not only a connector but also a Voltage Translator
 Then you need to connect the Pinheader to the LA. Be careful: Pin 1 to 1 and so on - till Pin 5 on the Sniffer: This is GND (Pin9 on LA). Then continue with Pin 5 to Pin 4 and so on.
 After this you can set your Logic Analyzer Software to the Line Names: DCD, RX, TX, DTR, DSR, RTS, CTS and RI
 
-<img src=rs232LA1.png>
+<img src=rs232LA1.png width=300px>
 
